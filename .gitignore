@@ -1,0 +1,44 @@
+# WordPress core files
+/wp-admin/
+/wp-includes/
+
+# WordPress core root files
+/wp-activate.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-config-sample.php
+/wp-cron.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
+
+# Default/unnecessary root files
+/readme.html
+/license.txt
+/LICENSE
+
+# Default plugins
+/wp-content/plugins/hello.php
+/wp-content/plugins/akismet/
+
+# Default themes (keep twentytwentyfive as fallback)
+/wp-content/themes/twentytwentythree/
+/wp-content/themes/twentytwentyfour/
+
+# Uploads (managed by WP, not by git)
+/wp-content/uploads/
+
+# OS and editor files
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.swo
+
+# Debug log
+/wp-content/debug.log

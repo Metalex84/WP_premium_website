@@ -89,7 +89,12 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-
+// Dynamic URL for ngrok tunneling
+if ( isset( $_SERVER['HTTP_X_FORWARDED_HOST'] ) ) {
+	define( 'WP_HOME', 'https://' . $_SERVER['HTTP_X_FORWARDED_HOST'] . '/custom_prototype' );
+	define( 'WP_SITEURL', 'https://' . $_SERVER['HTTP_X_FORWARDED_HOST'] . '/custom_prototype' );
+	$_SERVER['HTTPS'] = 'on';
+}
 
 /* That's all, stop editing! Happy publishing. */
 

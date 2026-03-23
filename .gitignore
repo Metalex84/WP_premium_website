@@ -40,5 +40,8 @@ Desktop.ini
 *.swp
 *.swo
 
+# Config (contains secrets — NEVER commit)
+/wp-config.php
+
 # Debug log
 /wp-content/debug.log

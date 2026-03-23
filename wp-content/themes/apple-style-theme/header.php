@@ -10,7 +10,7 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="<?php echo home_url(); ?>" class="logo">Mi<span class="logo-accent">Marca</span></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">Mi<span class="logo-accent">Marca</span></a>
 
     <nav class="nav" id="main-nav">
       <?php

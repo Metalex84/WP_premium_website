@@ -1,4 +1,38 @@
 
+# BEGIN Security Hardening
+
+# Disable directory listing
+Options -Indexes
+
+# Block xmlrpc.php (prevents brute-force amplification & DDoS)
+<Files xmlrpc.php>
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+# Block readme.html (hides WordPress version)
+<Files readme.html>
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+# Block wp-config.php access
+<Files wp-config.php>
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# END Security Hardening
+
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
